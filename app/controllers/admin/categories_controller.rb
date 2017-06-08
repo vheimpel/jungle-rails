@@ -5,13 +5,13 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def new
-    @categories = Categories.new
+    @categories = Category.new
   end
 
   def create
-    @categories = Categories.new(categories_params)
+    @categories = Category.new(category_params)
 
-    if @category.save
+    if @categories.save
       redirect_to [:admin, :categories], notice: 'Category created!'
     else
       render :new
@@ -19,7 +19,7 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def destroy
-    @category = Categories.find params[:id]
+    @category = Category.find params[:id]
     @category.destroy
     redirect_to [:admin, :categories], notice: 'Category deleted!'
   end
