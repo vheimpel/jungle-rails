@@ -29,6 +29,14 @@ cat1 = Category.find_or_create_by! name: 'Apparel'
 cat2 = Category.find_or_create_by! name: 'Electronics'
 cat3 = Category.find_or_create_by! name: 'Furniture'
 
+puts "Creates a user"
+
+User.create(
+  name: "zach levy",
+  password: "password123",
+  password_confirmation: "password123",
+  email: "s@s.com")
+
 ## PRODUCTS
 
 puts "Re-creating Products ..."
@@ -131,6 +139,15 @@ cat3.products.create!({
   quantity: 23,
   price: 2_483.75
 })
+
+puts "Creating reviews"
+
+Rating.create!({
+  product_id: 6,
+  user_id: 1,
+  description: 'Very great product!',
+  rating: 10,
+  })
 
 
 puts "DONE!"
