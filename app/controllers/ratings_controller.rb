@@ -1,12 +1,11 @@
 class RatingsController < ApplicationController
 
  def create
-    @rating = Rating.new(review_params)
-    @rating.user = user.[rating.user_id].name
+    @rating = Rating.new(rating_params)
     @rating.user_id = session[:user_id]
     @rating.product_id = params[:product_id]
     if @rating.save
-      redirect_to '/products/#{params[:product_id]}'
+      redirect_to '/products/' + @rating.product_id.to_s
     end
   end
 

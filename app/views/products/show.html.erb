@@ -26,8 +26,9 @@
           <dd><% @product.ratings.each do |rating| %>
                     <%= rating.rating %><br>
                     <%= rating.description %><br>
-                    <%= rating.user.name.titlecase %>
+                    <%= rating.user.name.titlecase %><p>
                  <% end %>
+          <%= render "ratings" %>
           </dd>
         </dl>
       </div>
