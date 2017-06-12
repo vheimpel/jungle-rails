@@ -7,6 +7,89 @@
 @import "products";
 
 // Global
+
+// light-yellow #FFE28E;
+// light-aqua: #81E2E1;
+// light-green: #C4F1BE;
+// green #5BBA6F;
+
 body {
   padding-top: 70px;
+  color: grey;
+
+  a {
+    color: #5BBA6F;
+    &:hover {
+      color: #C4F1BE;
+      text-decoration: none;
+    }
+  }
+
+   .navbar-default .navbar-nav > li > a {
+      color: white;
+      &:hover {
+      color: #C4F1BE;
+    }
+  }
+
+  .navbar-default {
+    height: 75px;
+    background-color: #5BBA6F;
+    border: none;
+    color: white;
+
+    #login-text {
+      color: white;
+      font-size: 12px;
+      padding: 15px;
+      a {
+        color: white;
+          &:hover {
+          color: #C4F1BE;
+        }
+      }
+    }
+
+    .navbar-brand {
+      color: white;
+      font-family: 'Sirin Stencil', sans-serif;
+      font-size: 3.5em;
+      &:hover {
+      color: #C4F1BE;
+    }
+    }
+
+  }
+
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Oxygen', sans-serif;
+    color: #5BBA6F;
+  }
+
+  .btn-primary {
+    background-color: #5BBA6F;
+    border: none;
+    &:hover {
+        background-color: #5BBA6F;
+      }
+  }
+
+  .col-sm-12 {
+    padding-left: 0;
+
+    h4 {
+      margin: 4px 0;
+    }
+
+    #rating_description {
+      // max-width: 400px;
+      // min-width: 200px;
+      width: 100%;
+    }
+  }
+
+
+
 }
+

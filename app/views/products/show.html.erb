@@ -22,11 +22,12 @@
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
-          <dt>Reviews</dt>
-          <dd><% @product.ratings.each do |rating| %>
-                    <%= rating.rating %><br>
+          <!-- <dt>Reviews</dt> -->
+          <dd><% @product.ratings.reverse_each do |rating| %>
+                    Rating: <%= rating.rating %>/10 <br>
                     <%= rating.description %><br>
-                    <%= rating.user.name.titlecase %><p>
+                    <%= rating.user.name.titlecase %><br>
+                    <%= rating.created_at.to_date.iso8601 %><p>
                  <% end %>
           <%= render "ratings" %>
           </dd>

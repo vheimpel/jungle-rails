@@ -26,4 +26,9 @@ class CartsController < ApplicationController
     redirect_to :back
   end
 
+  def update
+    # @line_item = LineItem.find(params[:id])
+    item.qty = params[:item][:qty]
+  end
+
 end
